@@ -37,3 +37,5 @@ paascloud:
   token:
     interceptor:
       enable: true
+  oauth2:
+    jwtSigningKey: paascloud
