@@ -34,3 +34,6 @@ pagehelper:
 
 paascloud:
   enableSqlLogInterceptor: false
+  token:
+    interceptor:
+      enable: true
