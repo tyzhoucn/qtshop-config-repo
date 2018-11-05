@@ -33,7 +33,7 @@ pagehelper:
   params: count=countSql
 
 paascloud:
-  enableSqlLogInterceptor: false
+  enableSqlLogInterceptor: true
   token:
     interceptor:
       enable: true
