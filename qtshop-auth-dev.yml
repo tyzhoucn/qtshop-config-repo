@@ -16,7 +16,7 @@ liquibase:
   url: ${spring.datasource.url}
 
 mybatis:
-  type-aliases-package: com.ucar.shopcloud.provider.model.domain
+  type-aliases-package: com.ucar.qtshop.auth.model.domain
   mapper-locations: classpath:mapper/*.xml,classpath*:sdk/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
