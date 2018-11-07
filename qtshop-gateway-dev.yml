@@ -19,7 +19,7 @@ zuul:
       path: /uac/**
       sensitiveHeaders:
 #      strip-prefix: false
-      service-id: qtshop-provider-uac
+      service-id: qtshop-uac
       ribbon:
         eager-load:
           enabled: true
