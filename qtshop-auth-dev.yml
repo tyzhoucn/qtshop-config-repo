@@ -35,8 +35,8 @@ security:
     client:
       clientId: paascloud-client-uac
       clientSecret: paascloudClientSecret
-      access-token-uri: http://paascloud-gateway:7979/auth/oauth/token
-      user-authorization-uri: http://paascloud-gateway:7979/auth/oauth/authorize
+      access-token-uri: http://qtshop-gateway:7979/auth/oauth/token
+      user-authorization-uri: http://qtshop-gateway:7979/auth/oauth/authorize
     resource:
       id: paascloud-resource-uac
       filter-order: 3

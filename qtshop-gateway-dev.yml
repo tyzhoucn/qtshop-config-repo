@@ -44,7 +44,7 @@ zuul:
     mdc-route:
       path: /mdc/**
       sensitiveHeaders:
-      service-id: qtshop-provider-mdc
+      service-id: qtshop-mdc
       ribbon:
         eager-load:
           enabled: true
@@ -56,7 +56,7 @@ zuul:
     omc-route:
       path: /omc/**
       sensitiveHeaders:
-      service-id: qtshop-provider-omc
+      service-id: qtshop-omc
       ribbon:
         eager-load:
           enabled: true
@@ -68,7 +68,7 @@ zuul:
     opc-route:
       path: /opc/**
       sensitiveHeaders:
-      service-id: qtshop-provider-opc
+      service-id: qtshop-opc
       ribbon:
         eager-load:
           enabled: true
@@ -92,7 +92,7 @@ zuul:
     tpc-route:
       path: /tpc/**
       sensitiveHeaders:
-      service-id: qtshop-provider-tpc
+      service-id: qtshop-tpc
       ribbon:
         eager-load:
           enabled: true
@@ -115,7 +115,7 @@ security:
       user-info-uri: http://qtshop-gateway:7979/auth/user
       prefer-token-info: false
       jwt:
-        key-uri: http://qtshop-auth:8000/oauth/token_key
+        key-uri: http://qtshop-security-auth:8000/oauth/token_key
 
 proxy:
   auth:
