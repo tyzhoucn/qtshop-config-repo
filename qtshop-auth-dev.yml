@@ -1,7 +1,4 @@
 spring:
-  aop:
-    proxy-target-class: true
-    auto: true
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
   jackson:
