@@ -15,24 +15,11 @@ zuul:
     connect-timeout-millis: 60000
   forceOriginalQueryStringEncoding: true
   routes:
-    auth-route:
-      path: /auth/**
-      sensitiveHeaders:
-#      strip-prefix: false
-      service-id: qtshop-auth
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
     uac-route:
       path: /uac/**
       sensitiveHeaders:
 #      strip-prefix: false
-      service-id: qtshop-uac
+      service-id: qtshop-auth
       ribbon:
         eager-load:
           enabled: true
@@ -109,10 +96,10 @@ security:
     client:
       clientId: paascloud-client-gateway
       clientSecret: paascloudClientSecret
-      access-token-uri: http://qtshop-gateway:7979/auth/oauth/token
-      user-authorization-uri: http://qtshop-gateway:7979/auth/oauth/authorize
+      access-token-uri: http://qtshop-gateway:7979/uac/oauth/token
+      user-authorization-uri: http://qtshop-gateway:7979/uac/oauth/authorize
     resource:
-      user-info-uri: http://qtshop-gateway:7979/auth/user
+      user-info-uri: http://qtshop-gateway:7979/uac/user
       prefer-token-info: false
       jwt:
         key-uri: http://qtshop-security-auth:8000/oauth/token_key
