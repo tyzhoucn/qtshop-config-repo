@@ -21,7 +21,12 @@ spring:
     host: qtshop-db-redis
     password: 123456
     port: 6379
-    timeout: 0
+    jedis:
+      pool:
+        max-active: 1024
+        max-wait: 500
+        max-idle: 200
+    timeout: 500
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat,wall
